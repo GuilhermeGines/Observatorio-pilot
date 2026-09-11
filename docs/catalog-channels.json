@@ -1,0 +1,1284 @@
+{
+  "checked_at": "2026-09-11T00:42:49.909604+00:00",
+  "scope": "Somente canais e metadados; sem artigos ou análise. Candidatos não confirmam extração de texto.",
+  "sources": [
+    {
+      "id": "poder360",
+      "channel": "https://www.poder360.com.br/feed/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://www.poder360.com.br/feed/"
+    },
+    {
+      "id": "folha",
+      "channel": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml"
+    },
+    {
+      "id": "nexo",
+      "channel": "https://www.nexojornal.com.br/",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "https://www.nexojornal.com.br/"
+    },
+    {
+      "id": "g1",
+      "channel": "https://g1.globo.com/rss/g1/",
+      "status": "candidatos",
+      "candidates": 60,
+      "dated": 60,
+      "final_url": "https://g1.globo.com/rss/g1/"
+    },
+    {
+      "id": "uol",
+      "channel": "https://rss.uol.com.br/feed/noticias.xml",
+      "status": "candidatos",
+      "candidates": 8,
+      "dated": 0,
+      "final_url": "https://rss.uol.com.br/feed/noticias.xml"
+    },
+    {
+      "id": "publica",
+      "channel": "https://apublica.org/feed/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://apublica.org/feed/"
+    },
+    {
+      "id": "cnnbr",
+      "channel": "https://www.cnnbrasil.com.br/feed/",
+      "status": "indisponivel",
+      "reason": "HTTP 403; conteúdo não recuperado."
+    },
+    {
+      "id": "ap",
+      "channel": "https://apnews.com/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://apnews.com/"
+    },
+    {
+      "id": "estadao",
+      "channel": "https://www.estadao.com.br/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.estadao.com.br/"
+    },
+    {
+      "id": "nyt",
+      "channel": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+      "status": "candidatos",
+      "candidates": 55,
+      "dated": 55,
+      "final_url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml"
+    },
+    {
+      "id": "bdf",
+      "channel": "https://www.brasildefato.com.br/feed/",
+      "status": "candidatos",
+      "candidates": 60,
+      "dated": 60,
+      "final_url": "https://www.brasildefato.com.br/feed/"
+    },
+    {
+      "id": "fox",
+      "channel": "https://moxie.foxnews.com/google-publisher/world.xml",
+      "status": "candidatos",
+      "candidates": 25,
+      "dated": 25,
+      "final_url": "https://moxie.foxnews.com/google-publisher/world.xml"
+    },
+    {
+      "id": "wapo",
+      "channel": "https://feeds.washingtonpost.com/rss/world",
+      "status": "candidatos",
+      "candidates": 14,
+      "dated": 14,
+      "final_url": "https://feeds.washingtonpost.com/rss/world"
+    },
+    {
+      "id": "cnn",
+      "channel": "https://www.cnn.com/",
+      "status": "candidatos",
+      "candidates": 24,
+      "dated": 0,
+      "final_url": "https://www.cnn.com/"
+    },
+    {
+      "id": "wsj",
+      "channel": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "propublica",
+      "channel": "https://www.propublica.org/feeds/propublica/main",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 20,
+      "final_url": "https://www.propublica.org/feeds/propublica/main"
+    },
+    {
+      "id": "npr",
+      "channel": "https://feeds.npr.org/1001/rss.xml",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://feeds.npr.org/1001/rss.xml"
+    },
+    {
+      "id": "verge",
+      "channel": "https://www.theverge.com/rss/index.xml",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://www.theverge.com/rss/index.xml"
+    },
+    {
+      "id": "chinadaily",
+      "channel": "https://www.chinadaily.com.cn/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.chinadaily.com.cn/"
+    },
+    {
+      "id": "ars",
+      "channel": "https://feeds.arstechnica.com/arstechnica/index",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 20,
+      "final_url": "https://feeds.arstechnica.com/arstechnica/index"
+    },
+    {
+      "id": "people",
+      "channel": "http://en.people.cn/rss/World.xml",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "http://en.people.cn/rss/World.xml"
+    },
+    {
+      "id": "globaltimes",
+      "channel": "https://www.globaltimes.cn/",
+      "status": "candidatos",
+      "candidates": 21,
+      "dated": 0,
+      "final_url": "https://www.globaltimes.cn/"
+    },
+    {
+      "id": "xinhua",
+      "channel": "https://english.news.cn/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://english.news.cn/"
+    },
+    {
+      "id": "chinanews",
+      "channel": "https://www.ecns.cn/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.ecns.cn/"
+    },
+    {
+      "id": "caixin",
+      "channel": "https://www.caixinglobal.com/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.caixinglobal.com/"
+    },
+    {
+      "id": "cgtn",
+      "channel": "https://www.cgtn.com/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.cgtn.com/"
+    },
+    {
+      "id": "sixthtone",
+      "channel": "https://www.sixthtone.com/",
+      "status": "candidatos",
+      "candidates": 24,
+      "dated": 0,
+      "final_url": "https://www.sixthtone.com/"
+    },
+    {
+      "id": "tass",
+      "channel": "https://tass.com/rss/v2.xml",
+      "status": "candidatos",
+      "candidates": 60,
+      "dated": 60,
+      "final_url": "https://tass.com/rss/v2.xml"
+    },
+    {
+      "id": "interfax",
+      "channel": "https://www.interfax.ru/rss.asp",
+      "status": "candidatos",
+      "candidates": 23,
+      "dated": 23,
+      "final_url": "https://www.interfax.ru/rss"
+    },
+    {
+      "id": "kommersant",
+      "channel": "https://www.kommersant.ru/RSS/news.xml",
+      "status": "indisponivel",
+      "reason": "Leitura não permitida pelo robots.txt da fonte."
+    },
+    {
+      "id": "rbc",
+      "channel": "https://rssexport.rbc.ru/rbcnews/news/30/full.rss",
+      "status": "candidatos",
+      "candidates": 29,
+      "dated": 29,
+      "final_url": "https://rssexport.rbc.ru/rbcnews/news/30/full.rss"
+    },
+    {
+      "id": "moscowtimes",
+      "channel": "https://www.themoscowtimes.com/rss/news",
+      "status": "candidatos",
+      "candidates": 50,
+      "dated": 50,
+      "final_url": "https://www.themoscowtimes.com/rss/news"
+    },
+    {
+      "id": "vedomosti",
+      "channel": "https://www.vedomosti.ru/rss/news.xml",
+      "status": "candidatos",
+      "candidates": 60,
+      "dated": 60,
+      "final_url": "https://www.vedomosti.ru/rss/news.xml"
+    },
+    {
+      "id": "rt",
+      "channel": "https://www.rt.com/rss/",
+      "status": "candidatos",
+      "candidates": 60,
+      "dated": 60,
+      "final_url": "https://www.rt.com/rss/"
+    },
+    {
+      "id": "itamaraty",
+      "channel": "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa",
+      "status": "candidatos",
+      "candidates": 28,
+      "dated": 0,
+      "final_url": "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa"
+    },
+    {
+      "id": "ria",
+      "channel": "https://ria.ru/export/rss2/archive/index.xml",
+      "status": "candidatos",
+      "candidates": 60,
+      "dated": 60,
+      "final_url": "https://ria.ru/export/rss2/archive/index.xml"
+    },
+    {
+      "id": "inpe",
+      "channel": "https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias"
+    },
+    {
+      "id": "ibge",
+      "channel": "https://agenciadenoticias.ibge.gov.br/agencia-noticias.html",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 0,
+      "final_url": "https://agenciadenoticias.ibge.gov.br/agencia-noticias.html"
+    },
+    {
+      "id": "unicamp",
+      "channel": "https://www.unicamp.br/",
+      "status": "candidatos",
+      "candidates": 25,
+      "dated": 0,
+      "final_url": "https://www.unicamp.br/"
+    },
+    {
+      "id": "rg",
+      "channel": "https://rg.ru/xml/index.xml",
+      "status": "candidatos",
+      "candidates": 59,
+      "dated": 59,
+      "final_url": "https://rg.ru/xml/index.xml"
+    },
+    {
+      "id": "nasa",
+      "channel": "https://www.nasa.gov/feed/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://www.nasa.gov/feed/"
+    },
+    {
+      "id": "bls",
+      "channel": "https://www.bls.gov/feed/bls_latest.rss",
+      "status": "candidatos",
+      "candidates": 1,
+      "dated": 1,
+      "final_url": "https://www.bls.gov/feed/bls_latest.rss"
+    },
+    {
+      "id": "state",
+      "channel": "https://www.state.gov/press-releases/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "meduza",
+      "channel": "https://meduza.io/rss2/en/all",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 30,
+      "final_url": "https://meduza.io/rss2/en/all"
+    },
+    {
+      "id": "mit",
+      "channel": "https://news.mit.edu/rss/feed",
+      "status": "candidatos",
+      "candidates": 50,
+      "dated": 50,
+      "final_url": "https://news.mit.edu/rss/feed"
+    },
+    {
+      "id": "harvard",
+      "channel": "https://news.harvard.edu/gazette/feed/",
+      "status": "candidatos",
+      "candidates": 50,
+      "dated": 50,
+      "final_url": "https://news.harvard.edu/gazette/feed/"
+    },
+    {
+      "id": "fmprc",
+      "channel": "https://www.fmprc.gov.cn/eng/xw/fyrbt/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "usp",
+      "channel": "https://jornal.usp.br/feed/",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 20,
+      "final_url": "https://jornal.usp.br/feed/"
+    },
+    {
+      "id": "agbr",
+      "channel": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml"
+    },
+    {
+      "id": "tsinghua",
+      "channel": "https://www.tsinghua.edu.cn/en/News/LATEST_NEWS.htm",
+      "status": "candidatos",
+      "candidates": 12,
+      "dated": 0,
+      "final_url": "https://www.tsinghua.edu.cn/en/News/LATEST_NEWS.htm"
+    },
+    {
+      "id": "mid",
+      "channel": "https://mid.ru/en/foreign_policy/news/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://mid.ru/en/foreign_policy/news/"
+    },
+    {
+      "id": "cbr",
+      "channel": "https://www.cbr.ru/rss/RssPress",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://www.cbr.ru/rss/RssPress"
+    },
+    {
+      "id": "ras",
+      "channel": "https://www.ras.ru/news.aspx",
+      "status": "candidatos",
+      "candidates": 8,
+      "dated": 0,
+      "final_url": "https://www.ras.ru/news.aspx"
+    },
+    {
+      "id": "peking",
+      "channel": "https://newsen.pku.edu.cn/newscenter.html",
+      "status": "candidatos",
+      "candidates": 5,
+      "dated": 0,
+      "final_url": "https://newsen.pku.edu.cn/newscenter.html"
+    },
+    {
+      "id": "planalto",
+      "channel": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/noticias"
+    },
+    {
+      "id": "cas",
+      "channel": "https://english.cas.cn/newsroom/research_news/",
+      "status": "indisponivel",
+      "reason": "HTTP 403; conteúdo não recuperado."
+    },
+    {
+      "id": "ufrj",
+      "channel": "https://conexao.ufrj.br/feed/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://conexao.ufrj.br/feed/"
+    },
+    {
+      "id": "itmo",
+      "channel": "https://news.itmo.ru/en/",
+      "status": "candidatos",
+      "candidates": 18,
+      "dated": 0,
+      "final_url": "https://news.itmo.ru/en/"
+    },
+    {
+      "id": "unesp",
+      "channel": "https://jornal.unesp.br/feed/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://jornal.unesp.br/feed/"
+    },
+    {
+      "id": "tecnoblog",
+      "channel": "https://tecnoblog.net/feed/",
+      "status": "candidatos",
+      "candidates": 50,
+      "dated": 50,
+      "final_url": "https://tecnoblog.net/feed/"
+    },
+    {
+      "id": "canaltech",
+      "channel": "https://canaltech.com.br/rss/",
+      "status": "indisponivel",
+      "reason": "Leitura não permitida pelo robots.txt da fonte."
+    },
+    {
+      "id": "olhardigital",
+      "channel": "https://olhardigital.com.br/feed/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://olhardigital.com.br/feed/"
+    },
+    {
+      "id": "statscn",
+      "channel": "https://www.stats.gov.cn/english/PressRelease/",
+      "status": "candidatos",
+      "candidates": 15,
+      "dated": 0,
+      "final_url": "https://www.stats.gov.cn/english/PressRelease/"
+    },
+    {
+      "id": "macmagazine",
+      "channel": "https://macmagazine.com.br/feed/",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 20,
+      "final_url": "https://macmagazine.com.br/feed/"
+    },
+    {
+      "id": "yicai",
+      "channel": "https://www.yicaiglobal.com/",
+      "status": "candidatos",
+      "candidates": 25,
+      "dated": 0,
+      "final_url": "https://www.yicaiglobal.com/"
+    },
+    {
+      "id": "sbpc",
+      "channel": "https://portal.sbpcnet.org.br/feed/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "pesquisafapesp",
+      "channel": "https://revistapesquisa.fapesp.br/feed/",
+      "status": "indisponivel",
+      "reason": "A fonte exige intervalo superior ao limite desta coleta; coleta adiada."
+    },
+    {
+      "id": "on",
+      "channel": "https://www.gov.br/observatorio/pt-br/assuntos/noticias",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.gov.br/observatorio/pt-br/assuntos/noticias"
+    },
+    {
+      "id": "ufmg",
+      "channel": "https://ufmg.br/comunicacao/noticias",
+      "status": "candidatos",
+      "candidates": 16,
+      "dated": 0,
+      "final_url": "https://www.ufmg.br"
+    },
+    {
+      "id": "fapesp",
+      "channel": "https://agencia.fapesp.br/",
+      "status": "candidatos",
+      "candidates": 18,
+      "dated": 0,
+      "final_url": "https://agencia.fapesp.br/"
+    },
+    {
+      "id": "cbpf",
+      "channel": "https://www.gov.br/cbpf/pt-br/assuntos/noticias",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "https://www.gov.br/cbpf/pt-br/assuntos/noticias"
+    },
+    {
+      "id": "aeb",
+      "channel": "https://www.gov.br/aeb/pt-br/assuntos/noticias",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 0,
+      "final_url": "https://www.gov.br/aeb/pt-br/assuntos/noticias"
+    },
+    {
+      "id": "cnpem",
+      "channel": "https://cnpem.br/feed/",
+      "status": "candidatos",
+      "candidates": 52,
+      "dated": 52,
+      "final_url": "https://cnpem.br/feed/"
+    },
+    {
+      "id": "msu",
+      "channel": "https://www.msu.ru/news/",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "https://msu.ru/news/"
+    },
+    {
+      "id": "valor",
+      "channel": "https://valor.globo.com/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://valor.globo.com/"
+    },
+    {
+      "id": "infomoney",
+      "channel": "https://www.infomoney.com.br/feed/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://www.infomoney.com.br/feed/"
+    },
+    {
+      "id": "climainfo",
+      "channel": "https://climainfo.org.br/feed/",
+      "status": "candidatos",
+      "candidates": 12,
+      "dated": 12,
+      "final_url": "https://climainfo.org.br/feed/"
+    },
+    {
+      "id": "defesabr",
+      "channel": "https://www.gov.br/defesa/pt-br/centrais-de-conteudo/noticias",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.gov.br/defesa/pt-br/centrais-de-conteudo/noticias"
+    },
+    {
+      "id": "defesaaerea",
+      "channel": "https://www.defesaaereanaval.com.br/feed",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://www.defesaaereanaval.com.br/feed"
+    },
+    {
+      "id": "fiocruz",
+      "channel": "https://agencia.fiocruz.br/noticias",
+      "status": "candidatos",
+      "candidates": 8,
+      "dated": 0,
+      "final_url": "https://agencia.fiocruz.br/noticias"
+    },
+    {
+      "id": "oeco",
+      "channel": "https://oeco.org.br/feed/",
+      "status": "candidatos",
+      "candidates": 12,
+      "dated": 12,
+      "final_url": "https://oeco.org.br/feed/"
+    },
+    {
+      "id": "butantan",
+      "channel": "https://butantan.gov.br/noticias",
+      "status": "indisponivel",
+      "reason": "HTTP 403; conteúdo não recuperado."
+    },
+    {
+      "id": "stanford",
+      "channel": "https://news.stanford.edu/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "whitehouse",
+      "channel": "https://www.whitehouse.gov/news/",
+      "status": "candidatos",
+      "candidates": 9,
+      "dated": 0,
+      "final_url": "https://www.whitehouse.gov/news/"
+    },
+    {
+      "id": "saudebr",
+      "channel": "https://www.gov.br/saude/pt-br/assuntos/noticias",
+      "status": "candidatos",
+      "candidates": 15,
+      "dated": 0,
+      "final_url": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms"
+    },
+    {
+      "id": "defesanet",
+      "channel": "https://www.defesanet.com.br/feed/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://www.defesanet.com.br/feed/"
+    },
+    {
+      "id": "princeton",
+      "channel": "https://www.princeton.edu/news",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.princeton.edu/news"
+    },
+    {
+      "id": "foreignaffairs",
+      "channel": "https://www.foreignaffairs.com/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.foreignaffairs.com/"
+    },
+    {
+      "id": "politico",
+      "channel": "https://www.politico.com/rss/politicopicks.xml",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "foreignpolicy",
+      "channel": "https://foreignpolicy.com/feed/",
+      "status": "candidatos",
+      "candidates": 25,
+      "dated": 25,
+      "final_url": "https://foreignpolicy.com/feed/"
+    },
+    {
+      "id": "sciencenews",
+      "channel": "https://www.sciencenews.org/feed",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 20,
+      "final_url": "https://www.sciencenews.org/feed"
+    },
+    {
+      "id": "scientificamerican",
+      "channel": "https://www.scientificamerican.com/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.scientificamerican.com/"
+    },
+    {
+      "id": "naval",
+      "channel": "https://www.naval.com.br/blog/feed/",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 20,
+      "final_url": "https://www.naval.com.br/blog/feed/"
+    },
+    {
+      "id": "science",
+      "channel": "https://www.science.org/news",
+      "status": "indisponivel",
+      "reason": "HTTP 403; conteúdo não recuperado."
+    },
+    {
+      "id": "tecmundo",
+      "channel": "https://rss.tecmundo.com.br/feed",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "https://rss.tecmundo.com.br/feed"
+    },
+    {
+      "id": "physicstoday",
+      "channel": "https://pubs.aip.org/physicstoday",
+      "status": "indisponivel",
+      "reason": "HTTP 403; conteúdo não recuperado."
+    },
+    {
+      "id": "aps",
+      "channel": "https://physics.aps.org/",
+      "status": "indisponivel",
+      "reason": "HTTP 403; conteúdo não recuperado."
+    },
+    {
+      "id": "skyandtelescope",
+      "channel": "https://skyandtelescope.org/feed/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "slac",
+      "channel": "https://www6.slac.stanford.edu/news",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 0,
+      "final_url": "https://www6.slac.stanford.edu/news-and-events/news-center"
+    },
+    {
+      "id": "wired",
+      "channel": "https://www.wired.com/feed/rss",
+      "status": "candidatos",
+      "candidates": 50,
+      "dated": 50,
+      "final_url": "https://www.wired.com/feed/rss"
+    },
+    {
+      "id": "techcrunch",
+      "channel": "https://techcrunch.com/feed/",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 20,
+      "final_url": "https://techcrunch.com/feed/"
+    },
+    {
+      "id": "astronomy",
+      "channel": "https://www.astronomy.com/feed/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://www.astronomy.com/feed/"
+    },
+    {
+      "id": "engadget",
+      "channel": "https://www.engadget.com/rss.xml",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 20,
+      "final_url": "https://www.engadget.com/rss.xml"
+    },
+    {
+      "id": "bloomberg",
+      "channel": "https://feeds.bloomberg.com/markets/news.rss",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "fed",
+      "channel": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 20,
+      "final_url": "https://www.federalreserve.gov/feeds/press_all.xml"
+    },
+    {
+      "id": "cnbc",
+      "channel": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 30,
+      "final_url": "https://www.cnbc.com/id/100003114/device/rss/rss.html"
+    },
+    {
+      "id": "noaa",
+      "channel": "https://www.noaa.gov/news",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "grist",
+      "channel": "https://grist.org/feed/",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 20,
+      "final_url": "https://grist.org/feed/"
+    },
+    {
+      "id": "insideclimate",
+      "channel": "https://insideclimatenews.org/feed/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://insideclimatenews.org/feed/"
+    },
+    {
+      "id": "space",
+      "channel": "https://www.space.com/feeds/all",
+      "status": "candidatos",
+      "candidates": 50,
+      "dated": 50,
+      "final_url": "https://www.space.com/feeds.xml"
+    },
+    {
+      "id": "fermilab",
+      "channel": "https://news.fnal.gov/feed/",
+      "status": "candidatos",
+      "candidates": 2,
+      "dated": 2,
+      "final_url": "https://news.fnal.gov/feed/"
+    },
+    {
+      "id": "eia",
+      "channel": "https://www.eia.gov/todayinenergy/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.eia.gov/todayinenergy/"
+    },
+    {
+      "id": "breakingdefense",
+      "channel": "https://breakingdefense.com/feed/",
+      "status": "candidatos",
+      "candidates": 15,
+      "dated": 15,
+      "final_url": "https://breakingdefense.com/feed/"
+    },
+    {
+      "id": "dod",
+      "channel": "https://www.defense.gov/News/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "nih",
+      "channel": "https://www.nih.gov/news-events/news-releases",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "defensenews",
+      "channel": "https://www.defensenews.com/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.defensenews.com/"
+    },
+    {
+      "id": "stat",
+      "channel": "https://www.statnews.com/feed/",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 20,
+      "final_url": "https://www.statnews.com/feed/"
+    },
+    {
+      "id": "stripes",
+      "channel": "https://www.stripes.com/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.stripes.com/"
+    },
+    {
+      "id": "cdc",
+      "channel": "https://www.cdc.gov/media/",
+      "status": "candidatos",
+      "candidates": 7,
+      "dated": 0,
+      "final_url": "https://www.cdc.gov/media/"
+    },
+    {
+      "id": "defenseone",
+      "channel": "https://www.defenseone.com/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.defenseone.com/"
+    },
+    {
+      "id": "statecouncil",
+      "channel": "https://english.www.gov.cn/news/",
+      "status": "candidatos",
+      "candidates": 15,
+      "dated": 0,
+      "final_url": "https://english.www.gov.cn/news/"
+    },
+    {
+      "id": "zhejiang",
+      "channel": "https://www.zju.edu.cn/english/",
+      "status": "candidatos",
+      "candidates": 3,
+      "dated": 0,
+      "final_url": "https://www.zju.edu.cn/english/"
+    },
+    {
+      "id": "sjtu",
+      "channel": "https://en.sjtu.edu.cn/news",
+      "status": "indisponivel",
+      "reason": "Redirecionamento ou domínio fora da fonte cadastrada; não seguido."
+    },
+    {
+      "id": "kff",
+      "channel": "https://kffhealthnews.org/feed/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 10,
+      "final_url": "https://kffhealthnews.org/feed/"
+    },
+    {
+      "id": "scmp",
+      "channel": "https://www.scmp.com/rss/91/feed",
+      "status": "indisponivel",
+      "reason": "Falha de leitura (TimeoutError); conteúdo não recuperado."
+    },
+    {
+      "id": "stdaily",
+      "channel": "https://www.stdaily.com/",
+      "status": "candidatos",
+      "candidates": 18,
+      "dated": 0,
+      "final_url": "https://www.stdaily.com/"
+    },
+    {
+      "id": "sciencenet",
+      "channel": "https://news.sciencenet.cn/",
+      "status": "candidatos",
+      "candidates": 2,
+      "dated": 0,
+      "final_url": "https://news.sciencenet.cn/"
+    },
+    {
+      "id": "fudan",
+      "channel": "https://www.fudan.edu.cn/en/",
+      "status": "candidatos",
+      "candidates": 4,
+      "dated": 0,
+      "final_url": "https://www.fudan.edu.cn/en/"
+    },
+    {
+      "id": "pmo",
+      "channel": "https://english.pmo.cas.cn/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "caltech",
+      "channel": "https://www.caltech.edu/about/news",
+      "status": "indisponivel",
+      "reason": "HTTP 403; conteúdo não recuperado."
+    },
+    {
+      "id": "ihep",
+      "channel": "https://english.ihep.cas.cn/nw/",
+      "status": "candidatos",
+      "candidates": 16,
+      "dated": 0,
+      "final_url": "https://english.ihep.cas.cn/nw/"
+    },
+    {
+      "id": "36kr",
+      "channel": "https://36kr.com/feed",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "https://36kr.com/feed"
+    },
+    {
+      "id": "nao",
+      "channel": "https://english.nao.cas.cn/",
+      "status": "candidatos",
+      "candidates": 10,
+      "dated": 0,
+      "final_url": "https://english.nao.cas.cn/"
+    },
+    {
+      "id": "iopcas",
+      "channel": "https://english.iop.cas.cn/",
+      "status": "candidatos",
+      "candidates": 20,
+      "dated": 0,
+      "final_url": "https://english.iop.cas.cn/"
+    },
+    {
+      "id": "technode",
+      "channel": "https://technode.com/feed/",
+      "status": "indisponivel",
+      "reason": "Documento excede limite de 8 MB do piloto."
+    },
+    {
+      "id": "geekpark",
+      "channel": "https://www.geekpark.net/",
+      "status": "indisponivel",
+      "reason": "HTTP 403; conteúdo não recuperado."
+    },
+    {
+      "id": "mee",
+      "channel": "https://english.mee.gov.cn/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "ithome",
+      "channel": "https://www.ithome.com/rss/",
+      "status": "candidatos",
+      "candidates": 60,
+      "dated": 60,
+      "final_url": "https://www.ithome.com/rss/"
+    },
+    {
+      "id": "modcn",
+      "channel": "http://eng.mod.gov.cn/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "http://eng.mod.gov.cn/"
+    },
+    {
+      "id": "nea",
+      "channel": "https://www.nea.gov.cn/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.nea.gov.cn/"
+    },
+    {
+      "id": "81cn",
+      "channel": "http://eng.chinamil.com.cn/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "http://eng.chinamil.com.cn/"
+    },
+    {
+      "id": "spbu",
+      "channel": "https://english.spbu.ru/news-events/news",
+      "status": "candidatos",
+      "candidates": 11,
+      "dated": 0,
+      "final_url": "https://english.spbu.ru/news-events/news"
+    },
+    {
+      "id": "cnsa",
+      "channel": "https://www.cnsa.gov.cn/english/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "chinacdc",
+      "channel": "https://en.chinacdc.cn/",
+      "status": "candidatos",
+      "candidates": 22,
+      "dated": 0,
+      "final_url": "https://en.chinacdc.cn/"
+    },
+    {
+      "id": "epbr",
+      "channel": "https://epbr.com.br/feed/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "nplus1",
+      "channel": "https://nplus1.ru/rss",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "elementy",
+      "channel": "https://elementy.ru/rss/news",
+      "status": "indisponivel",
+      "reason": "A fonte exige intervalo superior ao limite desta coleta; coleta adiada."
+    },
+    {
+      "id": "indicator",
+      "channel": "https://indicator.ru/",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "https://indicator.ru/api/unity-id-sdk/v1/auth-controller.html?origin=https://indicator.ru/"
+    },
+    {
+      "id": "jinr",
+      "channel": "https://www.jinr.ru/posts/category/news/",
+      "status": "indisponivel",
+      "reason": "HTTP 404; conteúdo não recuperado."
+    },
+    {
+      "id": "pingwest",
+      "channel": "https://en.pingwest.com/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "cma",
+      "channel": "https://www.cma.gov.cn/en2014/",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "https://www.cma.gov.cn/en2014/"
+    },
+    {
+      "id": "roscosmos",
+      "channel": "https://www.roscosmos.ru/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "mipt",
+      "channel": "https://mipt.ru/news/",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "https://mipt.ru/news"
+    },
+    {
+      "id": "iki",
+      "channel": "https://iki.cosmos.ru/news",
+      "status": "candidatos",
+      "candidates": 8,
+      "dated": 0,
+      "final_url": "https://iki.cosmos.ru/news"
+    },
+    {
+      "id": "cnews",
+      "channel": "https://www.cnews.ru/inc/rss/news.xml",
+      "status": "candidatos",
+      "candidates": 60,
+      "dated": 60,
+      "final_url": "https://www.cnews.ru/inc/rss/news.xml"
+    },
+    {
+      "id": "nhc",
+      "channel": "http://en.nhc.gov.cn/",
+      "status": "indisponivel",
+      "reason": "HTTP 502; conteúdo não recuperado."
+    },
+    {
+      "id": "3dnews",
+      "channel": "https://3dnews.ru/news/rss/",
+      "status": "candidatos",
+      "candidates": 60,
+      "dated": 60,
+      "final_url": "https://3dnews.ru/news/rss/"
+    },
+    {
+      "id": "kremlin",
+      "channel": "https://en.kremlin.ru/events/president/news",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "hse",
+      "channel": "https://www.hse.ru/en/news/",
+      "status": "candidatos",
+      "candidates": 16,
+      "dated": 0,
+      "final_url": "https://www.hse.ru/en/news/"
+    },
+    {
+      "id": "ixbt",
+      "channel": "https://www.ixbt.com/export/news.rss",
+      "status": "candidatos",
+      "candidates": 50,
+      "dated": 50,
+      "final_url": "https://www.ixbt.com/export/news/rss.xml"
+    },
+    {
+      "id": "inasan",
+      "channel": "https://www.inasan.ru/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "energyru",
+      "channel": "https://minenergo.gov.ru/",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "https://minenergo.gov.ru/"
+    },
+    {
+      "id": "redstar",
+      "channel": "https://redstar.ru/feed/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "meteoinfo",
+      "channel": "https://meteoinfo.ru/novosti",
+      "status": "sem_itens",
+      "candidates": 0,
+      "dated": 0,
+      "final_url": "https://meteoinfo.ru/novosti"
+    },
+    {
+      "id": "medvestnik",
+      "channel": "https://medvestnik.ru/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "roshydromet",
+      "channel": "https://www.meteorf.gov.ru/",
+      "status": "candidatos",
+      "candidates": 30,
+      "dated": 0,
+      "final_url": "https://www.meteorf.gov.ru/"
+    },
+    {
+      "id": "minzdrav",
+      "channel": "https://minzdrav.gov.ru/news",
+      "status": "candidatos",
+      "candidates": 13,
+      "dated": 0,
+      "final_url": "https://minzdrav.gov.ru/news"
+    },
+    {
+      "id": "modru",
+      "channel": "https://mil.ru/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "rospotrebnadzor",
+      "channel": "https://www.rospotrebnadzor.ru/",
+      "status": "indisponivel",
+      "reason": "Não foi possível verificar robots.txt; coleta adiada."
+    },
+    {
+      "id": "habr",
+      "channel": "https://habr.com/ru/rss/news/",
+      "status": "candidatos",
+      "candidates": 40,
+      "dated": 40,
+      "final_url": "https://habr.com/ru/rss/news/"
+    }
+  ]
+}

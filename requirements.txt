@@ -1,0 +1,11 @@
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+httpx>=0.28,<1
+beautifulsoup4>=4.13,<5
+feedparser>=6.0,<7
+trafilatura>=2,<3
+openai>=2,<3
+keyring>=25,<26
+pypdf>=5,<7
+python-dateutil>=2.9,<3
+tzdata>=2025.1

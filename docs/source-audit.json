@@ -1,0 +1,1089 @@
+{
+  "checked_at": "2026-09-08T00:48:14.104709+00:00",
+  "method": "Uma leitura de artigo por canal, além do RSS/página; respeita robots.txt. Não certifica disponibilidade futura.",
+  "sources": [
+    {
+      "source_id": "folha",
+      "status": "indisponivel",
+      "detail": {
+        "channel": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml",
+        "connector": "feed",
+        "candidates": 0,
+        "read": 0,
+        "saved": 0,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "message": "Canal respondeu, mas nenhum item elegível foi identificado. Integração sem conteúdo validado."
+      },
+      "checked_at": "2026-09-08T00:47:26.000644+00:00"
+    },
+    {
+      "source_id": "poder360",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.poder360.com.br/feed/",
+        "connector": "feed",
+        "candidates": 10,
+        "read": 1,
+        "saved": 10,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "10 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:26.357436+00:00"
+    },
+    {
+      "source_id": "g1",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://g1.globo.com/rss/g1/",
+        "connector": "feed",
+        "candidates": 60,
+        "read": 1,
+        "saved": 59,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "60 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:28.005405+00:00"
+    },
+    {
+      "source_id": "estadao",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://www.estadao.com.br/",
+        "connector": "page",
+        "candidates": 30,
+        "read": 0,
+        "saved": 30,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "30 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:28.397513+00:00"
+    },
+    {
+      "source_id": "nexo",
+      "status": "indisponivel",
+      "detail": {
+        "channel": "https://www.nexojornal.com.br/",
+        "connector": "page",
+        "candidates": 0,
+        "read": 0,
+        "saved": 0,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "message": "Canal respondeu, mas nenhum item elegível foi identificado. Integração sem conteúdo validado."
+      },
+      "checked_at": "2026-09-08T00:47:28.769214+00:00"
+    },
+    {
+      "source_id": "publica",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://apublica.org/feed/",
+        "connector": "feed",
+        "candidates": 10,
+        "read": 1,
+        "saved": 10,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-04",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "10 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:29.174247+00:00"
+    },
+    {
+      "source_id": "bdf",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.brasildefato.com.br/feed/",
+        "connector": "feed",
+        "candidates": 60,
+        "read": 1,
+        "saved": 60,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-04",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "60 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:30.484210+00:00"
+    },
+    {
+      "source_id": "cnnbr",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.cnnbrasil.com.br/feed/",
+        "connector": "feed",
+        "candidates": 60,
+        "read": 1,
+        "saved": 59,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "60 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:32.213791+00:00"
+    },
+    {
+      "source_id": "ap",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://apnews.com/",
+        "connector": "page",
+        "candidates": 30,
+        "read": 1,
+        "saved": 29,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "30 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:33.704187+00:00"
+    },
+    {
+      "source_id": "uol",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://rss.uol.com.br/feed/noticias.xml",
+        "connector": "feed",
+        "candidates": 5,
+        "read": 0,
+        "saved": 5,
+        "failures": [
+          {
+            "url": "https://noticias.uol.com.br/ultimas-noticias/afp/2026/09/07/russia-retoma-ataques-a-kiev-apos-tres-dias.htm",
+            "reason": "HTTP 403; conteúdo não recuperado."
+          }
+        ],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "5 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:34.046413+00:00"
+    },
+    {
+      "source_id": "nyt",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+        "connector": "feed",
+        "candidates": 49,
+        "read": 0,
+        "saved": 49,
+        "failures": [
+          {
+            "url": "https://www.nytimes.com/2026/09/07/world/europe/ukraine-russia-witkoff-kushner-trump.html",
+            "reason": "HTTP 403; conteúdo não recuperado."
+          }
+        ],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-04",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "49 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:34.704711+00:00"
+    },
+    {
+      "source_id": "wsj",
+      "status": "indisponivel",
+      "detail": {
+        "channel": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
+        "connector": "feed",
+        "candidates": 0,
+        "read": 0,
+        "saved": 0,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "message": "Não foi possível verificar robots.txt; coleta adiada."
+      },
+      "checked_at": "2026-09-08T00:47:34.991005+00:00"
+    },
+    {
+      "source_id": "npr",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://feeds.npr.org/1001/rss.xml",
+        "connector": "feed",
+        "candidates": 10,
+        "read": 1,
+        "saved": 10,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-06",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "10 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:34.979965+00:00"
+    },
+    {
+      "source_id": "cnn",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://www.cnn.com/",
+        "connector": "page",
+        "candidates": 16,
+        "read": 0,
+        "saved": 16,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "16 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:36.083256+00:00"
+    },
+    {
+      "source_id": "propublica",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.propublica.org/feeds/propublica/main",
+        "connector": "feed",
+        "candidates": 20,
+        "read": 1,
+        "saved": 20,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-08-25",
+        "feed_max_date": "2026-09-04",
+        "limited": true,
+        "message": "20 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:36.520752+00:00"
+    },
+    {
+      "source_id": "wapo",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://feeds.washingtonpost.com/rss/world",
+        "connector": "feed",
+        "candidates": 7,
+        "read": 0,
+        "saved": 7,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-06",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "7 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:36.926791+00:00"
+    },
+    {
+      "source_id": "people",
+      "status": "indisponivel",
+      "detail": {
+        "channel": "http://en.people.cn/rss/World.xml",
+        "connector": "feed",
+        "candidates": 0,
+        "read": 0,
+        "saved": 0,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "message": "Canal respondeu, mas nenhum item elegível foi identificado. Integração sem conteúdo validado."
+      },
+      "checked_at": "2026-09-08T00:47:37.221711+00:00"
+    },
+    {
+      "source_id": "fox",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://moxie.foxnews.com/google-publisher/world.xml",
+        "connector": "feed",
+        "candidates": 25,
+        "read": 1,
+        "saved": 25,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-02",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "25 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:37.784544+00:00"
+    },
+    {
+      "source_id": "verge",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://www.theverge.com/rss/index.xml",
+        "connector": "feed",
+        "candidates": 10,
+        "read": 0,
+        "saved": 10,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-06",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "10 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:38.135474+00:00"
+    },
+    {
+      "source_id": "xinhua",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://english.news.cn/",
+        "connector": "page",
+        "candidates": 30,
+        "read": 1,
+        "saved": 30,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "30 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:39.298939+00:00"
+    },
+    {
+      "source_id": "ars",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://feeds.arstechnica.com/arstechnica/index",
+        "connector": "feed",
+        "candidates": 20,
+        "read": 0,
+        "saved": 20,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-03",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "20 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:38.834964+00:00"
+    },
+    {
+      "source_id": "chinadaily",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.chinadaily.com.cn/",
+        "connector": "page",
+        "candidates": 30,
+        "read": 1,
+        "saved": 30,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "30 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:40.272492+00:00"
+    },
+    {
+      "source_id": "globaltimes",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.globaltimes.cn/",
+        "connector": "page",
+        "candidates": 23,
+        "read": 1,
+        "saved": 23,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "23 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:40.594140+00:00"
+    },
+    {
+      "source_id": "cgtn",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.cgtn.com/",
+        "connector": "page",
+        "candidates": 30,
+        "read": 1,
+        "saved": 30,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "30 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:41.254098+00:00"
+    },
+    {
+      "source_id": "chinanews",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.ecns.cn/",
+        "connector": "page",
+        "candidates": 30,
+        "read": 1,
+        "saved": 30,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "30 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:42.334604+00:00"
+    },
+    {
+      "source_id": "caixin",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://www.caixinglobal.com/",
+        "connector": "page",
+        "candidates": 30,
+        "read": 0,
+        "saved": 30,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "30 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:43.713721+00:00"
+    },
+    {
+      "source_id": "sixthtone",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.sixthtone.com/",
+        "connector": "page",
+        "candidates": 23,
+        "read": 1,
+        "saved": 23,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "23 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:44.070560+00:00"
+    },
+    {
+      "source_id": "tass",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://tass.com/rss/v2.xml",
+        "connector": "feed",
+        "candidates": 60,
+        "read": 1,
+        "saved": 59,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-08",
+        "limited": true,
+        "message": "60 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:45.706188+00:00"
+    },
+    {
+      "source_id": "interfax",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.interfax.ru/rss.asp",
+        "connector": "feed",
+        "candidates": 22,
+        "read": 1,
+        "saved": 21,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-08",
+        "limited": true,
+        "message": "22 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:47.017871+00:00"
+    },
+    {
+      "source_id": "agbr",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
+        "connector": "feed",
+        "candidates": 10,
+        "read": 1,
+        "saved": 10,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "10 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:47.495312+00:00"
+    },
+    {
+      "source_id": "kommersant",
+      "status": "indisponivel",
+      "detail": {
+        "channel": "https://www.kommersant.ru/RSS/news.xml",
+        "connector": "feed",
+        "candidates": 0,
+        "read": 0,
+        "saved": 0,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "message": "Leitura não permitida pelo robots.txt da fonte."
+      },
+      "checked_at": "2026-09-08T00:47:47.535892+00:00"
+    },
+    {
+      "source_id": "ria",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://ria.ru/export/rss2/archive/index.xml",
+        "connector": "feed",
+        "candidates": 60,
+        "read": 1,
+        "saved": 59,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-08",
+        "limited": true,
+        "message": "60 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:49.409895+00:00"
+    },
+    {
+      "source_id": "vedomosti",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.vedomosti.ru/rss/news.xml",
+        "connector": "feed",
+        "candidates": 60,
+        "read": 1,
+        "saved": 60,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-08",
+        "limited": true,
+        "message": "60 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:51.134864+00:00"
+    },
+    {
+      "source_id": "rt",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.rt.com/rss/",
+        "connector": "feed",
+        "candidates": 60,
+        "read": 1,
+        "saved": 59,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-05",
+        "feed_max_date": "2026-09-08",
+        "limited": true,
+        "message": "60 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:53.108203+00:00"
+    },
+    {
+      "source_id": "moscowtimes",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.themoscowtimes.com/rss/news",
+        "connector": "feed",
+        "candidates": 50,
+        "read": 1,
+        "saved": 50,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-08-29",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "50 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:54.185019+00:00"
+    },
+    {
+      "source_id": "rg",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://rg.ru/xml/index.xml",
+        "connector": "feed",
+        "candidates": 60,
+        "read": 1,
+        "saved": 59,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-08",
+        "limited": true,
+        "message": "60 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:55.014951+00:00"
+    },
+    {
+      "source_id": "itamaraty",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa",
+        "connector": "page",
+        "candidates": 27,
+        "read": 0,
+        "saved": 27,
+        "failures": [
+          {
+            "url": "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa/visita-do-ministro-mauro-vieira-a-singapura",
+            "reason": "Falha de leitura (ReadError); conteúdo não recuperado."
+          }
+        ],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "27 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:56.201936+00:00"
+    },
+    {
+      "source_id": "meduza",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://meduza.io/rss2/en/all",
+        "connector": "feed",
+        "candidates": 30,
+        "read": 1,
+        "saved": 30,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-08",
+        "limited": true,
+        "message": "30 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:56.664631+00:00"
+    },
+    {
+      "source_id": "ibge",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://agenciadenoticias.ibge.gov.br/agencia-noticias.html",
+        "connector": "page",
+        "candidates": 20,
+        "read": 1,
+        "saved": 20,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "20 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:57.003777+00:00"
+    },
+    {
+      "source_id": "inpe",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.gov.br/inpe/pt-br/assuntos/ultimas-noticias",
+        "connector": "page",
+        "candidates": 30,
+        "read": 1,
+        "saved": 30,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "30 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:57.939584+00:00"
+    },
+    {
+      "source_id": "rbc",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://rssexport.rbc.ru/rbcnews/news/30/full.rss",
+        "connector": "feed",
+        "candidates": 30,
+        "read": 0,
+        "saved": 30,
+        "failures": [
+          {
+            "url": "https://www.rbc.ru/technology_and_media/07/09/2026/6a9ef194c9ce81b3b24be0b6",
+            "reason": "Não foi possível verificar robots.txt; coleta adiada."
+          }
+        ],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-08",
+        "limited": true,
+        "message": "30 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:58.414550+00:00"
+    },
+    {
+      "source_id": "unicamp",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.unicamp.br/",
+        "connector": "page",
+        "candidates": 24,
+        "read": 1,
+        "saved": 24,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "24 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:58.920213+00:00"
+    },
+    {
+      "source_id": "usp",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://jornal.usp.br/feed/",
+        "connector": "feed",
+        "candidates": 20,
+        "read": 1,
+        "saved": 20,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-04",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "20 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:59.524707+00:00"
+    },
+    {
+      "source_id": "state",
+      "status": "indisponivel",
+      "detail": {
+        "channel": "https://www.state.gov/press-releases/",
+        "connector": "page",
+        "candidates": 0,
+        "read": 0,
+        "saved": 0,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "message": "Não foi possível verificar robots.txt; coleta adiada."
+      },
+      "checked_at": "2026-09-08T00:47:59.571800+00:00"
+    },
+    {
+      "source_id": "bls",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://www.bls.gov/feed/bls_latest.rss",
+        "connector": "feed",
+        "candidates": 1,
+        "read": 0,
+        "saved": 1,
+        "failures": [
+          {
+            "url": "https://www.bls.gov/bls/",
+            "reason": "HTTP 403; conteúdo não recuperado."
+          }
+        ],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-04",
+        "feed_max_date": "2026-09-04",
+        "limited": false,
+        "message": "1 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:47:59.795133+00:00"
+    },
+    {
+      "source_id": "mit",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://news.mit.edu/rss/feed",
+        "connector": "feed",
+        "candidates": 50,
+        "read": 1,
+        "saved": 50,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-08-14",
+        "feed_max_date": "2026-09-04",
+        "limited": true,
+        "message": "50 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:01.093858+00:00"
+    },
+    {
+      "source_id": "nasa",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.nasa.gov/feed/",
+        "connector": "feed",
+        "candidates": 10,
+        "read": 1,
+        "saved": 10,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-03",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "10 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:03.001838+00:00"
+    },
+    {
+      "source_id": "fmprc",
+      "status": "indisponivel",
+      "detail": {
+        "channel": "https://www.fmprc.gov.cn/eng/xw/fyrbt/",
+        "connector": "page",
+        "candidates": 0,
+        "read": 0,
+        "saved": 0,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "message": "Não foi possível verificar robots.txt; coleta adiada."
+      },
+      "checked_at": "2026-09-08T00:48:03.041708+00:00"
+    },
+    {
+      "source_id": "harvard",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://news.harvard.edu/gazette/feed/",
+        "connector": "feed",
+        "candidates": 50,
+        "read": 1,
+        "saved": 50,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-07-20",
+        "feed_max_date": "2026-09-04",
+        "limited": true,
+        "message": "50 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:04.577763+00:00"
+    },
+    {
+      "source_id": "scmp",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://www.scmp.com/rss/91/feed",
+        "connector": "feed",
+        "candidates": 50,
+        "read": 0,
+        "saved": 50,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-09-07",
+        "feed_max_date": "2026-09-08",
+        "limited": true,
+        "message": "50 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:06.615073+00:00"
+    },
+    {
+      "source_id": "yicai",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.yicaiglobal.com/",
+        "connector": "page",
+        "candidates": 25,
+        "read": 1,
+        "saved": 25,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "25 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:06.995413+00:00"
+    },
+    {
+      "source_id": "tsinghua",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.tsinghua.edu.cn/en/News/LATEST_NEWS.htm",
+        "connector": "page",
+        "candidates": 14,
+        "read": 1,
+        "saved": 14,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "14 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:07.606627+00:00"
+    },
+    {
+      "source_id": "cas",
+      "status": "indisponivel",
+      "detail": {
+        "channel": "https://english.cas.cn/newsroom/research_news/",
+        "connector": "page",
+        "candidates": 0,
+        "read": 0,
+        "saved": 0,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "message": "HTTP 403; conteúdo não recuperado."
+      },
+      "checked_at": "2026-09-08T00:48:07.650818+00:00"
+    },
+    {
+      "source_id": "peking",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://newsen.pku.edu.cn/newscenter.html",
+        "connector": "page",
+        "candidates": 5,
+        "read": 1,
+        "saved": 5,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "5 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:08.503889+00:00"
+    },
+    {
+      "source_id": "ras",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.ras.ru/news.aspx",
+        "connector": "page",
+        "candidates": 8,
+        "read": 1,
+        "saved": 8,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "8 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:09.079045+00:00"
+    },
+    {
+      "source_id": "cbr",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.cbr.ru/rss/RssPress",
+        "connector": "feed",
+        "candidates": 10,
+        "read": 1,
+        "saved": 10,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": "2026-08-12",
+        "feed_max_date": "2026-09-07",
+        "limited": true,
+        "message": "10 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:09.284329+00:00"
+    },
+    {
+      "source_id": "mid",
+      "status": "parcial",
+      "detail": {
+        "channel": "https://mid.ru/en/foreign_policy/news/",
+        "connector": "page",
+        "candidates": 30,
+        "read": 0,
+        "saved": 30,
+        "failures": [
+          {
+            "url": "https://mid.ru/en/press_service/minister_speeches/",
+            "reason": "Falha de leitura (ReadError); conteúdo não recuperado."
+          }
+        ],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "30 itens identificados; 0 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:09.905125+00:00"
+    },
+    {
+      "source_id": "itmo",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://news.itmo.ru/en/",
+        "connector": "page",
+        "candidates": 18,
+        "read": 1,
+        "saved": 18,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "18 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:10.743272+00:00"
+    },
+    {
+      "source_id": "msu",
+      "status": "indisponivel",
+      "detail": {
+        "channel": "https://www.msu.ru/news/",
+        "connector": "page",
+        "candidates": 0,
+        "read": 0,
+        "saved": 0,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "message": "Canal respondeu, mas nenhum item elegível foi identificado. Integração sem conteúdo validado."
+      },
+      "checked_at": "2026-09-08T00:48:10.800863+00:00"
+    },
+    {
+      "source_id": "statscn",
+      "status": "disponivel",
+      "detail": {
+        "channel": "https://www.stats.gov.cn/english/PressRelease/",
+        "connector": "page",
+        "candidates": 15,
+        "read": 1,
+        "saved": 15,
+        "failures": [],
+        "scope": "Janela recente do canal; sem varredura histórica completa.",
+        "feed_min_date": null,
+        "feed_max_date": null,
+        "limited": true,
+        "message": "15 itens identificados; 1 textos extraídos. Limite de 1 leituras por fonte."
+      },
+      "checked_at": "2026-09-08T00:48:14.101496+00:00"
+    }
+  ]
+}
