@@ -23,3 +23,14 @@
 .analysis-meter{margin:18px 0;padding:16px 18px;border:1px solid #dfe7d5;border-radius:9px;background:#fff}.analysis-meter>div{display:flex;justify-content:space-between;gap:16px;font-size:13px;color:#607453}.analysis-meter progress{display:block;width:100%;height:6px;margin:10px 0;accent-color:#648653;border:0;border-radius:9px;overflow:hidden}.analysis-meter progress::-webkit-progress-bar{background:#edf2e7}.analysis-meter progress::-webkit-progress-value{background:#648653;transition:width .5s}.analysis-meter small{font-size:11px;color:#7b8873}
 
 .illustrated-item{padding:20px 0;border-bottom:1px solid #dce3d6}.article-picture{margin:16px 0}.article-picture img{display:block;width:100%;max-height:440px;object-fit:contain;border-radius:12px;background:#f4f6f0}.article-picture figcaption{font-size:12px;color:#697760;margin-top:8px}
+/* Keep country cards within their column, including long source descriptions. */
+.world-panel{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+.world-panel>*{min-width:0}
+.country-panel{width:100%;min-width:0}
+.country-options{grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))}
+.country-option{min-width:0;width:100%}
+.country-option>span:nth-child(2){min-width:0;flex:1}
+.country-option strong,.country-option small{white-space:normal;overflow-wrap:anywhere}
+.country-option small{display:block;margin-left:0}
+.selection-note{flex-wrap:wrap}
+@media(max-width:760px){.world-panel{grid-template-columns:minmax(0,1fr)}}
