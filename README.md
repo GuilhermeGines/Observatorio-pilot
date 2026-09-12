@@ -18,7 +18,7 @@ Explore notícias e documentos de Brasil, Estados Unidos, China e Rússia no nav
 ## Começar no Windows
 
 1. Abra a pasta do aplicativo e dê dois cliques em **Iniciar.cmd**.
-2. O navegador abre em **http://127.0.0.1:8765**. Mantenha a janela de execução aberta. Para encerrar, pressione `Ctrl+C` nela ou abra **Encerrar.cmd**. Este último verifica a identidade do processo antes de encerrá-lo e também funciona quando o piloto está em segundo plano.
+2. O navegador abre em direcionando o IP e a porta. Mantenha a janela de execução aberta. Para encerrar, pressione `Ctrl+C` nela ou abra **Encerrar.cmd**. Este último verifica a identidade do processo antes de encerrá-lo e também funciona quando o piloto está em segundo plano.
 3. Escolha os países no globo ou nos botões, uma palavra-chave, temas e as datas de publicação. Use **Buscar no acervo** ou **Buscar nas fontes**.
 4. Abra os documentos para ver os trechos lidos, a publicação original, a coleta e as revisões. Consulte **Cobertura** para ver as fontes ausentes.
 5. Use **Salvar no histórico** para tornar a consulta visível no histórico. Reabrir reutiliza evidências e análises, sem coletar ou pagar novamente.
