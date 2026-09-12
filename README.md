@@ -1,5 +1,7 @@
 # Observatório · piloto local
 
+Gemini e múltiplas IAs: salve modelos independentes, selecione quais geram o resumo e acompanhe o uso em cartões compactos. Consulte [docs/GEMINI-E-MODELOS.md](docs/GEMINI-E-MODELOS.md) para conexão, cotas e limites.
+
 Provedor experimental Codex com login ChatGPT, seleção dos modelos disponíveis na conta e painel de limites e tokens. Ollama e OpenAI API permanecem disponíveis. Ativação: [docs/CODEX.md](docs/CODEX.md).
 
 Atualização 11/09/2026: imagens removidas. A síntese por país seleciona trechos relevantes, agrupa repetições e usa referências numeradas. Consulte docs/FILA.md para o estado atual; referências a imagens em registros anteriores descrevem uma funcionalidade descontinuada.

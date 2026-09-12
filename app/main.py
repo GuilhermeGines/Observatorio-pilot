@@ -16,7 +16,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 from openai import AsyncOpenAI, OpenAIError
-from . import ai, db
+from . import ai, db, profiles
 from .catalog import COUNTRIES, TOPICS, BY_ID
 from .collection import Reader, allowed, base_body, canonical, collect, extract_article, safe_error
 from .models import KeyInput, QueryInput, SettingsInput
@@ -73,14 +73,64 @@ def settings():
     with db.connect() as connection:
         usage=[dict(r)|{'usage':json.loads(r['usage'])} for r in connection.execute('SELECT * FROM usage ORDER BY id DESC LIMIT 50')]
         counts={table:connection.execute(f'SELECT COUNT(*) FROM {table}').fetchone()[0] for table in ['documents','revisions','analyses','audio']}
-    return db.setting().model_dump()|{'key_configured':bool(ai.get_key()),'key_from_environment':bool(os.environ.get('OPENAI_API_KEY')),'data_dir':str(db.DATA),'usage':usage,'counts':counts}
+    return db.setting().model_dump()|{'key_configured':bool(ai.get_key()),'gemini_key_configured':bool(ai.get_key('gemini')),'ai_profiles':profiles.available(),'key_from_environment':bool(os.environ.get('OPENAI_API_KEY')),'data_dir':str(db.DATA),'usage':usage,'counts':counts}
 
 @app.put('/api/settings')
 def put_settings(value:SettingsInput):
     if any(s not in BY_ID for s in value.disabled_sources):
         raise HTTPException(422,'Fonte desconhecida.')
+    profiles.remember(db.setting())
     db.save_settings(value)
+    profiles.remember(value)
     return settings()
+
+@app.put('/api/gemini/key')
+def put_gemini_key(value:KeyInput):
+    try: ai.set_key(value.key,'gemini')
+    except Exception as error:
+        raise HTTPException(400,'Não foi possível guardar a chave no cofre seguro do sistema.') from error
+    return {'configured':bool(ai.get_key('gemini'))}
+
+@app.delete('/api/gemini/key')
+def delete_gemini_key():
+    ai.remove_key('gemini')
+    return {'configured':bool(ai.get_key('gemini'))}
+
+@app.get('/api/gemini/models')
+async def gemini_models():
+    key=ai.get_key('gemini')
+    if not key: raise HTTPException(400,'Guarde sua chave Gemini primeiro.')
+    try:
+        async with AsyncOpenAI(api_key=key,base_url='https://generativelanguage.googleapis.com/v1beta/openai/',max_retries=0,timeout=20) as client:
+            catalog=await client.models.list()
+            return {'models':[m.id for m in catalog.data if 'gemini' in m.id.lower()],
+                    'message':'Conexão verificada. A disponibilidade gratuita depende do plano e modelo no AI Studio.'}
+    except OpenAIError:
+        raise HTTPException(502,'Não foi possível consultar os modelos Gemini. Confira a chave e a rede.')
+
+@app.get('/api/ai-profiles/{identifier}')
+def get_profile(identifier:str):
+    try: return profiles.configuration(identifier).model_dump()
+    except ValueError as error: raise HTTPException(404,str(error))
+
+@app.delete('/api/ai-profiles/{identifier}')
+def delete_profile(identifier:str):
+    profiles.remove(identifier)
+    return settings()
+
+@app.get('/api/providers/usage')
+def providers_usage():
+    result={p['provider']:{'provider':p['provider'],'input_tokens':0,'output_tokens':0,'partial':False,'calls':0} for p in profiles.available() if p['ready']}
+    with db.connect() as connection:
+        rows=connection.execute('SELECT usage FROM usage').fetchall()
+    for row in rows:
+        usage=json.loads(row['usage']);provider=usage.get('provider','openai')
+        if provider not in result or usage.get('cache_only'): continue
+        item=result[provider];item['calls']+=1
+        for field in ['input_tokens','output_tokens']:
+            if usage.get(field) is None: item['partial']=True
+            else: item[field]+=usage[field]
+    return {'providers':list(result.values())}
 
 @app.get('/api/codex/status')
 async def codex_status():
@@ -225,12 +275,12 @@ def unsave(query_id:str):
     return {'message':'Removida da lista de histórico. Documentos e análises permanecem no acervo.'}
 
 @app.get('/api/queries/{query_id}/analysis-plan')
-def analysis_plan(query_id:str,kind:Literal['summary','crossings']='summary'):
+def analysis_plan(query_id:str,kind:Literal['summary','crossings']='summary',profile_id:str|None=None):
     query=query_detail(query_id)
     if not query['result']:
         raise HTTPException(409,'Consulta ainda sem resultado.')
     try:
-        return {k:v for k,v in ai.plan(query,kind).items() if k!='payload'}
+        return {k:v for k,v in ai.plan(query,kind,profile_id).items() if k!='payload'}
     except ValueError as error:
         raise HTTPException(400,str(error))
 
@@ -240,6 +290,8 @@ def analysis_progress(query_id:str):
     return ai.ANALYSIS_PROGRESS.get(query_id,{'percent':0,'label':'Aguardando início','state':'idle'})
 
 class AnalyzeInput(BaseModel):
+    profile_id:str|None=Field(default=None,max_length=64)
+    summary_id:str|None=Field(default=None,max_length=64)
     regenerate:bool=False
     kind:Literal['summary','crossings']='summary'
 
@@ -249,11 +301,11 @@ async def analyze(query_id:str,value:AnalyzeInput):
     if not query['result']:
         raise HTTPException(409,'Consulta ainda sem resultado.')
     try:
-        return await ai.analyze(query,value.regenerate,kind=value.kind)
+        return await ai.analyze(query,value.regenerate,kind=value.kind,profile_id=value.profile_id,summary_id=value.summary_id)
     except ValueError as error:
         raise HTTPException(400,str(error))
     except OpenAIError:
-        raise HTTPException(502,'Falha na API OpenAI. O acervo foi preservado. Verifique modelo, saldo, permissão e rede. Uma solicitação recebida pela API pode ter custo; não houve repetição automática.')
+        raise HTTPException(502,'Falha na API de IA. O acervo foi preservado. Verifique modelo, saldo, permissão e rede. Uma solicitação recebida pela API pode ter custo; não houve repetição automática.')
 
 @app.get('/api/revisions/{revision_id}')
 def revision(revision_id:int):

@@ -22,10 +22,11 @@ class QueryInput(BaseModel):
         return self
 
 class SettingsInput(BaseModel):
+    gemini_model: str = Field(default='',max_length=100,pattern=r'^[a-zA-Z0-9._:/-]*$')
     resource_profile: Literal['auto','cpu'] = 'auto'
     memory_reserve_gb: float = Field(default=3,ge=1,le=32)
     codex_model: str = Field(default='',max_length=100,pattern=r'^[a-zA-Z0-9._:/-]*$')
-    provider: Literal['openai','ollama','codex'] = 'openai'
+    provider: Literal['openai','ollama','codex','gemini'] = 'openai'
     ollama_model: str = Field(default='qwen3.5:4b', min_length=1, max_length=100, pattern=r'^[a-zA-Z0-9._:/-]+$')
     ollama_context: int = Field(default=16384, ge=8192, le=65536)
     model: str = Field(default='gpt-5.4-mini', min_length=1, max_length=100, pattern=r'^[a-zA-Z0-9._:-]+$')

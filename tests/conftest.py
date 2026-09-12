@@ -7,7 +7,7 @@ from app import db,ai
 @pytest.fixture(autouse=True)
 def isolated_data(tmp_path,monkeypatch):
     monkeypatch.setattr(db,'DATA',tmp_path/'data')
-    monkeypatch.setattr(ai,'get_key',lambda:'')
+    monkeypatch.setattr(ai,'get_key',lambda *args:'')
     db.init()
     yield
 
