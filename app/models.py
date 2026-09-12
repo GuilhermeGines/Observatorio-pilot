@@ -22,6 +22,10 @@ class QueryInput(BaseModel):
         return self
 
 class SettingsInput(BaseModel):
+    gemini_search_enabled: bool = False
+    gemini_31_rpm: int | None = Field(default=None,ge=1,le=1000000)
+    gemini_31_tpm: int | None = Field(default=None,ge=1,le=1000000000)
+    gemini_31_rpd: int | None = Field(default=None,ge=1,le=10000000)
     gemini_model: str = Field(default='',max_length=100,pattern=r'^[a-zA-Z0-9._:/-]*$')
     resource_profile: Literal['auto','cpu'] = 'auto'
     memory_reserve_gb: float = Field(default=3,ge=1,le=32)
@@ -100,5 +104,17 @@ class ParagraphSummaryOutput(BaseModel):
     summaries: list[ParagraphPoint]
     gaps: list[str]
 
+class TopicClassification(BaseModel):
+    topics: list[str] = Field(max_length=3)
+    confident: bool
+
+    @model_validator(mode='after')
+    def validate_topics(self):
+        if any(topic not in TOPICS for topic in self.topics):
+            raise ValueError('Tema fora do catálogo.')
+        self.topics=list(dict.fromkeys(self.topics))
+        return self
+
 def output_model(kind):
+    if kind=='classification': return TopicClassification
     return ParagraphSummaryOutput if kind=='summary' else CrossingsOutput

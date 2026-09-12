@@ -8,7 +8,7 @@ Atualização 11/09/2026: imagens removidas. A síntese por país seleciona trec
 
 Melhorias atuais: verificador do computador e perfil automático em Configurações; resumos com cache entre consultas, Brasil em português e demais fontes em inglês. Detalhes de ativação e limites em docs/FILA.md.
 
-Catálogo ampliado: 170 fontes únicas; por país, cinco por tema, dez veículos, um governo principal e cinco universidades. A busca seleciona fontes pelo assunto antes da coleta. Expressões desconhecidas usam classificação curta local; na dúvida, selecione um tema. Detalhes e limitações em docs/CATALOGO.md.
+Catálogo ampliado: 170 fontes únicas; por país, cinco por tema, dez veículos, um governo principal e cinco universidades. A busca seleciona fontes pelo assunto antes da coleta. Sem tema manual, a IA habilitada interpreta a expressão completa. Em caso de ambiguidade ou falha, a coleta continua pelas fontes jornalísticas gerais dos países selecionados. Detalhes e limitações em docs/CATALOGO.md.
 
 Fluxo atual: **Preparar resumo** gera somente uma síntese com referências. Depois, **Preparar cruzamentos** gera comparações e interpretações sob demanda. Cada etapa é salva separadamente. A geração de áudio e roteiro foi removida.
 
@@ -62,6 +62,8 @@ Implementação consultada na documentação oficial: [saídas estruturadas](htt
 
 ## Cobertura e limites honestos
 
+Em **Configurações**, a opção **Busca ampliada com Gemini** complementa cada **Buscar nas fontes** com palavra-chave, sem aguardar um país ficar sem resultado. O `gemini-2.5-flash-lite` formula até duas expressões alternativas por país em uma chamada curta; a API documental pública do GDELT procura publicações pelo país e período. A IA escolhida para os resumos continua independente. A chave Gemini usa a cota ou cobrança do projeto Google; o índice GDELT não usa essa chave. **Buscar no acervo** continua local. Só páginas de fontes cadastradas cujo texto, assunto e data sejam confirmados pelo leitor do Observatório entram no acervo e no resumo. Páginas de outros sites são mostradas separadamente para conferência; a resposta redigida pelo Gemini nunca é usada como evidência.
+
 Veja **[docs/CATALOGO.md](docs/CATALOGO.md)** e **[docs/source-audit.json](docs/source-audit.json)** para seleção, canais e testes reais. O status da instalação em Configurações se atualiza a cada coleta. Uma URL cadastrada não significa fonte plenamente integrada.
 
 - A coleta percorre **até 60 itens de feed ou 30 links de página**, e lê até o número configurado de artigos por fonte (padrão: 3; máximo: 10). Isso é uma amostra recente, não todo o site. Itens fora do limite ficam como metadados/trechos, se distribuídos pela fonte.
@@ -114,3 +116,7 @@ Para desenvolvimento com recarga: defina `OBS_DEV=1`, execute `uvicorn app.main:
 Testes de IA, áudio e alguns cenários de erro usam **fixtures explicitamente sintéticas em pastas temporárias**. Nada sintético é injetado no acervo real. Sem chave fornecida, a análise e a voz não foram testadas com chamadas reais pagas. Veja [docs/VALIDACAO.md](docs/VALIDACAO.md) para resultados e limites da entrega.
 
 O serviço escuta **somente em 127.0.0.1**. Não altere para `0.0.0.0` nem use túnel público: o piloto é pessoal, sem sistema multiusuário. Há validação de Host, Origin e token de sessão para alterações, sem CORS aberto.
+
+A classificação automática usa uma chamada curta ao provedor padrão habilitado (ou à última configuração disponível), registra o uso e reutiliza a classificação por até seis horas nesta execução. Temas escolhidos manualmente têm prioridade e dispensam a chamada. A identificação é probabilística; não garante reconhecer todo nome ou assunto.
+
+As novas análises são redigidas integralmente em português do Brasil, inclusive para fontes estrangeiras. O Gemini traduz ao elaborar o resumo e os cruzamentos, sem uma chamada adicional de tradução. Citações verificáveis e documentos coletados preservam o idioma original. Análises antigas permanecem no histórico; gere novamente para obter a versão em português.

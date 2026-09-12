@@ -56,6 +56,40 @@ async def test_unknown_expression_local_routing_without_real_model(monkeypatch):
     q2=QueryInput(countries=['RU'],keyword='expressao ambigua desconhecida',start='2026-09-09',end='2026-09-09')
     async def ambiguous(*args,**kwargs): return {'message':{'content':'{"topics":[],"confident":false}'}}
     monkeypatch.setattr(ollama_local,'request',ambiguous)
-    assert (await source_routing.resolve(q2))['source_ids']==[]
-    assert selected_sources(q2)==[]
+    assert (await source_routing.resolve(q2))['mode']=='general'
+    assert selected_sources(q2) and all('jornalismo_geral' in source['groups'] for source in selected_sources(q2))
 
+
+@pytest.mark.asyncio
+@pytest.mark.parametrize('provider',['ollama','codex','openai','gemini'])
+async def test_full_expression_routes_with_each_provider(monkeypatch,provider):
+    from app import source_routing,ai
+    from app.models import TopicClassification
+    source_routing.CLASSIFICATIONS.clear()
+    monkeypatch.setattr(ai,'get_key',lambda *args:'synthetic')
+    config=db.setting();config.provider=provider;config.allow_ai=True
+    config.codex_model='synthetic-codex';config.gemini_model='synthetic-gemini';db.save_settings(config)
+    seen=[]
+    async def classify(expression,countries,settings):
+        seen.append((expression,countries,settings.provider))
+        return TopicClassification(topics=['politica'],confident=True)
+    monkeypatch.setattr(source_routing,'classify',classify)
+    q=QueryInput(countries=['BR','US'],keyword='nome novo e decisão de tribunal',start='2026-09-09',end='2026-09-09')
+    result=await source_routing.resolve(q)
+    assert seen==[(q.keyword,['BR','US'],provider)]
+    assert result['mode']=='semantic' and q.topics==[]
+    assert all(source['country'] in q.countries and 'politica' in source['topics'] for source in selected_sources(q))
+
+@pytest.mark.asyncio
+async def test_manual_choice_wins_and_failure_never_blocks(monkeypatch):
+    from app import source_routing
+    config=db.setting();config.provider='ollama';config.allow_ai=True;db.save_settings(config)
+    async def failing(*args): raise RuntimeError('synthetic failure')
+    monkeypatch.setattr(source_routing,'classify',failing)
+    q=QueryInput(countries=['BR'],keyword='iphone',topics=['fisica'],start='2026-09-09',end='2026-09-09')
+    assert (await source_routing.resolve(q))['mode']=='explicit'
+    assert all('fisica' in source['topics'] for source in selected_sources(q))
+    q.topics=[]
+    result=await source_routing.resolve(q)
+    assert result['mode']=='general' and len(result['source_ids'])==10
+    assert all(source['country']=='BR' and 'jornalismo_geral' in source['groups'] for source in selected_sources(q))

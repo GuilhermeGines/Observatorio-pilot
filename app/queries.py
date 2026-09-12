@@ -107,6 +107,51 @@ def make_result(query,coverage=None):
           'Semelhança textual não estabelece correlação estatística, causalidade nem confirmação independente.'],
         'created_at':db.now()}
 
+
+def add_discovery(result, discovery):
+    """Include only locally verified publisher texts; keep other links as leads."""
+    existing={d['revision_id'] for d in result['documents']}
+    added=0
+    discovered_sources=set()
+    for item in discovery['verified']:
+        revision_id=item['revision_id']
+        if revision_id in existing:
+            continue
+        row=db.read_revision(revision_id)
+        source=BY_ID.get(item['source_id'])
+        if not row or not source:
+            continue
+        result['documents'].append({k:v for k,v in row.items() if k!='body'} |
+            {'revision_id':revision_id,'collected_at':row['created_at'],'source_name':source['name'],
+             'affiliation':source['affiliation'],'source_kind':source['kind']})
+        existing.add(revision_id)
+        added+=1
+        discovered_sources.add(source['id'])
+    result['documents'].sort(key=lambda d:d.get('published_at') or '',reverse=True)
+    result['total_matches']+=added
+    if len(result['documents'])>200:
+        result['documents']=result['documents'][:200]
+        result['truncated']=True
+    result['related_pairs']=related_pairs(result['documents'])
+    result['origin_groups']=origin_groups(result['documents'])
+    coverage_by_id={item['source_id']:item for item in result['coverage']}
+    for source_id in discovered_sources:
+        if source_id not in coverage_by_id:
+            source=BY_ID[source_id]
+            result['coverage'].append({'source_id':source_id,'name':source['name'],'country':source['country'],
+                'status':'acervo','detail':{'message':'Publicação encontrada pelo Gemini e verificada no site original.'},
+                'checked_at':db.now(),'matches':0,'displayed_matches':0})
+    for item in result['coverage']:
+        if item['source_id'] in discovered_sources:
+            item['displayed_matches']=sum(d['source_id']==item['source_id'] for d in result['documents'])
+            item['matches']=max(item.get('matches',0),item['displayed_matches'])
+    for summary in result['country_summaries']:
+        summary['count']=sum(d['country']==summary['country'] for d in result['documents'])
+    result['discovery']=({k:v for k,v in discovery.items() if k!='verified'} |
+        {'verified_count':len(discovery['verified'])})
+    result['limitations'].append('Busca ampliada: somente textos e datas conferidos na publicação original entram na análise; demais links são pistas.')
+    return result
+
 def read_query(query_id):
     with db.connect() as connection:
         row=connection.execute('SELECT * FROM queries WHERE id=?',(query_id,)).fetchone()

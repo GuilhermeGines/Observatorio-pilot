@@ -122,7 +122,7 @@ def delete_profile(identifier:str):
 def providers_usage():
     result={p['provider']:{'provider':p['provider'],'input_tokens':0,'output_tokens':0,'partial':False,'calls':0} for p in profiles.available() if p['ready']}
     with db.connect() as connection:
-        rows=connection.execute('SELECT usage FROM usage').fetchall()
+        rows=connection.execute('SELECT usage,model,created_at FROM usage').fetchall()
     for row in rows:
         usage=json.loads(row['usage']);provider=usage.get('provider','openai')
         if provider not in result or usage.get('cache_only'): continue
@@ -130,6 +130,9 @@ def providers_usage():
         for field in ['input_tokens','output_tokens']:
             if usage.get(field) is None: item['partial']=True
             else: item[field]+=usage[field]
+    if 'gemini' in result:
+        from .gemini_quota import current
+        result['gemini']['quota']=current(rows)
     return {'providers':list(result.values())}
 
 @app.get('/api/codex/status')
@@ -211,7 +214,19 @@ async def run_query(query_id,value):
                 def progress(n,total,name):
                     JOBS[query_id]={'completed':n,'total':total,'source':name}
                 coverage=await collect(value,query_id,progress)
+        discovery=None
+        if value.mode=='collect' and db.setting().gemini_search_enabled and value.keyword:
+            from .expanded_search import discover
+            JOBS[query_id]={'completed':0,'total':len(value.countries),'source':'Busca ampliada com Gemini'}
+            try:
+                discovery=await discover(value,query_id,lambda n,total,name:JOBS.update({query_id:{'completed':n,'total':total,'source':name}}))
+            except Exception as error:
+                discovery={'model':'gemini-2.5-flash-lite','verified':[],'leads':[],
+                           'notes':['Busca ampliada indisponível: '+(str(error) if isinstance(error,ValueError) else safe_error(error))],'calls':0}
         result=make_result(value,coverage)
+        if discovery:
+            from .queries import add_discovery
+            result=add_discovery(result,discovery)
         with db.connect() as connection:
             connection.execute("UPDATE queries SET status='pronta',result=? WHERE id=?",(db.dumps(result),query_id))
     except asyncio.CancelledError:
